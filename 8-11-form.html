@@ -1,160 +1,189 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>2020.8.10-I wanna a GOOD job!</title>
+    <title>2020.8.11-still wanna a GOOD job!</title>
 </head>
 <body>
-	<!-- 引用 -->
-	<blockquote>
-	<p>Learn from yesterday, live for today, hope for tommorrow</p>
-	</blockquote>
-	<p>constract to upstairs</p>
-	<hr>
-	<!-- 缩写词和首字母缩写词 -->
-	<p><abbr title="Professor">Prof</abbr>
-	Stephen hawking is a theoretical physicist and cosmologist.
-	</p>
-	<p>
-		<acronym title="National Aeronautics and Space Administractor">NASA</acronym> and do some crazy space stuff
-	</p>
-	<hr>
-	<!-- 引文 -->
-	<p>
-		<cite> A brief history of Time</cite>
-		has hold over ten million copies worldwide.
-	</p>
-	<hr>
-	<!-- 定义 -->
-	<p>A <dfn>black hole</dfn> is a region of space from which nothing, not even light.</p>
-	<hr>
-	<!-- 设计者详细信息 -->
-	<address id="address">
-		<p>
-			<a href="yhuang@stu.xmu.edu.cn">yhuang@stu.xmu.edu.cn</a>
-		</p>
-		<p>
-			Jiang Su, China
-		</p>
-	</address>
-	<hr>
-
-	<!-- 内容上的修改 -->
-	<p>How are u?<br>
-		I'm <del>overwhelmed</del> <ins>fine</ins>.
-	</p>
-	<p>price tag:</p>
-	<p><s>was $999</s></p>
-	<p>Now only $99</p>
-	<hr>
-	<!-- 有序列表 -->
-	<p>有序列表</p>
-	<ol>
-		<li>a-order</li>
-		<li>b-order</li>
-		<li>c-order</li>
-		<li>d-order</li>
-	</ol>
-	<!-- 无序列表 -->
-	<p>无序列表</p>
-	<ul>
-		<li>unorder</li>
-		<li>unorder</li>
-		<li>unorder</li>
-		<li>unorder</li>
-	</ul>
-	<p>定义列表</p>
-	<dl>
-		<dt>1-dt</dt>
-		<dd>1-dd</dd>
-		<dt>2-dt</dt>
-		<dd>2-dd</dd>
-	</dl>
-    <hr>
-    <p>链接</p>
+    <p>表单结构</p>
+    <p>action-其值为服务器上一个页面的URL，接收表单中的信息</p>
+    <p>method-表单的提交方式</p>
     <ul>
-    	<li><a href="https://blog.csdn.net/qq_38156298">我的博客-绝对URL</a></li>
-    	<li><a href="appdeix.html">同一网站中的其他页面-相对URL</a></li>
-    	<li><a href="mailto:yhuang@stu.xmu.edu.cn">EMAIL链接-mailto:XXX@mail address</a></li>
-    	<li><a href="https://blog.csdn.net/qq_38156298" target="_blank">新建窗口打开链接</a></li>
-    	<li><a href="#address">链接到页面某个位置</a></li>
-    	<li><a href="http://www.htmlandcssbook.com/#bottom">其他页面的某个位置</a></li>
+        <li>
+            get方法-值附加在action的那个URL的末尾，适用于：
+            <ul>
+                <li>短表单，如搜索框</li>
+                <li>只从web服务器上检索数据的情形</li>
+            </ul>
+        </li>
+        <li>
+            post方法-值放在HTTP头信息中发送，使用情形：
+            <ul>
+                <li>允许用户上传文件</li>
+                <li>非常长</li>
+                <li>包含敏感信息，如密码</li>
+                <li>向数据库中添加/删除信息</li>
+            </ul>
+        </li>
+    <hr>
     </ul>
+    <p>单行文本框&密码框</p>
+    <form action="http://www.example.com/login.php">
+        <p>Username:
+            <input type="text" name="Username" size="15" maxlength="30">
+        </p>
+        <p>Password:
+            <input type="password" name="ps", size="15", maxlength="30">
+        </p>
+    </form>
+    <p>文本域textarea</p>
+    <form action="http://www.example.com/login.php">
+        <textarea name="commit" cols="20" rows="4">Enter commits....
+        </textarea>
+    </form>
     <hr>
-    <p>添加图像</p>
-    <img src="images/friends.jpg" title="friends" alt="friends 4ever!!" width="600" height="450">
-    <p>图像和图像的说明figure</p>
-    <figure>
-    	<img src="images/friends.jpg" alt="photo of friends series" width="600" height="450">
-    	<br>
-    	<figcaption>
-    		Ross, Rachel, Joey, Monica, ......
-    	</figcaption>
-    </figure>
+    <p>单选按钮ratio-设置相同的name属性迫使单选</p>
+    <form action="">
+        <p>select one elem</p><br>
+        <input type="radio" name="animal" value="Cat" checked="checked">Cats
+        <input type="radio" name="animal" value="Dog" >Dogs
+    </form>
+    <p>复选框checkbox</p>
+    <form action="http://www.example.com/login.php">
+        <p>My Dreams:</p>
+        <input type="checkbox" name="dreams" value="job" checked="checked">GOOD job
+        <input type="checkbox" name="dreams" value="papr" checked="checked">Papers
+        <input type="checkbox" name="dreams" value="bf" checked="checked">Boyfriend
+    </form>
     <hr>
-    <p>表格</p>
-    <table>
-    	<tr>
-    		<td>1.1</td>
-    		<td>1.2</td>
-    		<td>1.3</td>
-    	</tr>
-    	<tr>
-    		<td>2.1</td>
-    		<td>2.2</td>
-    		<td>2.3</td>
-    	</tr>
-    </table>
-    <p>表格的标题</p>
-    <table>
-    	<tr>
-    		<th></th>
-    		<th scope="col">col-1</th>
-    		<th scope="col">col-2</th>
-    		<th scope="col">col-3</th>
-    	</tr>
-    	<tr>
-    		<th scope="row">row-1</th>
-    		<td>1.1</td>
-    		<td>1.2</td>
-    		<td>1.3</td>
-    	</tr>
-    	<tr>
-    		<th scope="row">row-2</th>
-    		<td>2.1</td>
-    		<td>2.2</td>
-    		<td>2.3</td>
-    	</tr>
-    </table>
+    <p>下拉列表框select>option</p>
+    <form action="http://www.example.com/login.php">
+        <p>what app do you use</p>
+        <select name="devices">
+            <option value="netease">Netease</option>
+            <option value="spotify">Spotify</option>
+            <option value="QQ music">QQ music</option>
+        </select>
+    </form>
+    <p>多选框select:multiple</p>
+    <form action="http://www.example.com/login.php">
+        <p>duoxuan</p>
+        <select name="multi" size="3" multiple="multiple">
+            <option value="YG" selected="selected">YG</option>
+            <option value="oasis">oasis</option>
+            <option value="blur">blur</option>
+            <option value="ikon">ikon</option>
+        </select>
+    </form>
+    <hr>
+    <p>文件上传input:file 和提交</p>
+    <form action="http://www.example.com/login.php">
+        <p>select a file</p>
+        <input type="file" name="file"><br>
+        <input type="submit" name="filesubmit" value="upload">
+    </form>
+    <hr>
+    <p>图像按钮</p>
+    <form action="http://www.example.com/login.php">
+        <p>提交图片</p>
+        <input type="text" name="email">
+        <input type="image" src="images/friends.jpg" width="100" height="20">
+    </form>
+    <hr>
+    <p>按钮和隐藏控件</p>
+    <form action="http://www.example.com/login.php">
+        <button>Add</button>
+        <input type="hidden" name="bookmark" value="lyrics">
+    </form>
+    <hr>
+    <p>标签控件</p>
+    <label>Aga: <input type="text" name="age"></label><br>
+    Gender:
+    <input id="female" type="radio" name="gender">
+    <label for="female">
+        Female
+    </label>
+    <input id="male" type="radio" name="gender">
+    <label for="male">
+        Male
+    </label>
+    <p>组合表单控件fieldset</p>
+    <fieldset>
+        <legend>Contact details</legend>
+        <label>Emails:<br>
+            <input type="text" name="email"></label><br>
+        <label>mobiles:<br>
+            <input type="text" name="mobile">
+        </label><br>
+        <label>Address:<br>
+            <input type="text" name="addr">
+        </label><br>
+    </fieldset>
+    <p>表单验证</p>
+    <form action="http://www.example.com/login.php">
+        <label for="usname">
+            Username:
+        </label>
+        <input type="text" name="usname"><br>
+        <label for="psw">password:</label>
+        <input type="password" name="psw" required="required">
+        <input type="submit" value="submit" >
+    </form>
+    <hr>
+    <p>日期控件:input-type="data"</p>
+    <p>电子邮件:input-type="email"</p>
+    <p>URL输入:input-type="url"</p>
 
-	<p>表格的跨列</p>
-    <table>
-    	<tr>
-    		<th></th>
-    		<th scope="col" colspan="2">col-1</th>
-    		<th scope="col">col-2</th>
-    		
-    	</tr>
-    	<tr>
-    		<th scope="row">row-1</th>
-    		<td colspan="2">1.1</td>
-    		
-    		<td>1.3</td>
-    	</tr>
-    	<tr>
-    		<th scope="row">row-2</th>
-    		<td>2.1</td>
-    		<td>2.2</td>
-    		<td>2.3</td>
-    	</tr>
-    </table>
-    <p>长表格加上thead\tbody\tfoot</p>
     <hr>
-    <p>表单控件</p>
-    
+    <p>搜索输入控件</p>
+    <form action="http://www.example.com/login.php">
+        <p>Search:</p>
+        <input type="search" name="search" placeholder="What do u want?">
+        <input type="submit" name="" value="Submit"> 
+    </form>
+
+    <p>实例</p>
+    <form action="http://www.example.com/login.php">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <label>Name:<input type="text" name=""></label><br>
+            <label>Email:<input type="email" name=""></label>
+        </fieldset>
+        <fieldset>
+            <legend>Your Review:</legend>
+            <label>How did you hear about us? 
+                <select>
+                    <option value="google">Google</option>
+                    <option value="baidu">baidu</option>
+                </select>
+            </label>
+            <p>would u visit again?<br>
+            <input type="radio" name="visit" id="yes">
+            <label for="yes">yes</label>
+            <input type="radio" name="visit" id="no">
+            <label for="no">no</label>
+            <label>
+                <input type="radio" name="visit" value="maybe"> 
+                maybe
+            </label>
+            </p>
+            <p>
+                <label>
+                    Comments: <br>
+                    <textarea cols="40" rows="4"></textarea>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="" checked="checked">
+                    Sign up for email updates
+                </label>
+            </p>
+            <p>
+                <input type="submit" name="" value="Submit Review">
+            </p>
+        </fieldset>
+    </form>
+
 </body>
 </html>
-
-
-
-
