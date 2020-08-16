@@ -1,0 +1,15 @@
+#gradient{
+	background-color: #66cccc;
+	/*background-image: */
+
+	/*firefox 3.6+*/
+	background-image: -moz-linear-gradient(#33666,#66cccc);
+	/*safari 4+, Chrome 1+*/
+	background-image: -webkit-gradient(linea, 0% 0%, 0% 100%, from(#66cccc), to(#336666));
+    /*safari 5.1+ chrome 10+*/
+	background-image: -webkit-linear-gradient(#66cccc,#336666);
+	/*opera 11.10+*/
+	background-image: -o-linear-gradient(#66cccc,#336666)
+	width: 300px;
+	height: 150px;
+}
